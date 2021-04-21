@@ -5,8 +5,8 @@
 
 ## Link 
 
-**산 코드**
+### 산코드 
 - https://github.com/waterfogSW/Scheduler-Simulator
 
-**정현 코드**
+### 정현 코드
 - https://github.com/rilac1/scheduler
