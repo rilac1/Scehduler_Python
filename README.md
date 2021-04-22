@@ -21,9 +21,13 @@ git push origin kim   // 원격 저장소 저장
 
 git checkout main     // `main` branch로 이동
 git merge kim         // `main`, `kim` 병합(내용 동기화)
-git push origin main  // `main` 브렌치 push 
+git push origin main  // `main` 브렌치 push
 ```
 
 ```sh
 git status            // 현재 작업중인 `branch` 출력
+```
+
+```sh
+git push --set-uptream origin kim // `kim` branch를 default 원격 저장소로 지정
 ```
