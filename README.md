@@ -13,6 +13,11 @@
 
 ## 깃허브 사용법
 
+### 진행사항
+
+상단 `Projects` 확인
+
+### Branch
 main branch에 대한 conflict를 방지하기위해 임계영역 수정시 새로운 branch를 생성하여 수정하고 커밋한 후 merge하기
 
 ```sh
