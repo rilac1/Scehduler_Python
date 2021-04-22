@@ -13,8 +13,7 @@
 
 ## 깃허브 사용법
 
-main branch에 대한 conflict를 방지하기위해 
-수정시 새로운 branch를 생성하여 수정하고 커밋한 후 merge하기
+main branch에 대한 conflict를 방지하기위해 임계영역 수정시 새로운 branch를 생성하여 수정하고 커밋한 후 merge하기
 
 ```sh
 git chekout -b kim      // `kim` branch로 이동 (-b옵션은 새로운 branch생성옵션)
