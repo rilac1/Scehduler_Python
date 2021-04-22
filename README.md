@@ -25,7 +25,8 @@ git push origin main  // `main` 브렌치 push
 ```
 
 ```sh
-git status            // 현재 작업중인 `branch` 출력
+git status            // 현재 작업중인 branch 출력
+git branch -d issue1  // branch 삭제 
 ```
 
 ```sh
