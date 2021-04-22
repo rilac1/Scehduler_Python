@@ -14,16 +14,16 @@
 ## 깃허브 사용법
 
 ```sh
-git chekout kim
-git add -all
-git commit -m ""
-git push origin kim
+git chekout kim       // `kim` branch로 이동 
+git add -all          // git 으로 관리할 파일 등록
+git commit -m ""      // 로컬 저장소 저장  
+git push origin kim   // 원격 저장소 저장 
 
-git checkout main
-git merge kim         //
-git push origin main  // main브렌치 push 
+git checkout main     // `main` branch로 이동
+git merge kim         // `main`, `kim` 병합(내용 동기화)
+git push origin main  // `main` 브렌치 push 
 ```
 
 ```sh
-git status            // 현재 작업중인 브랜치 출력
+git status            // 현재 작업중인 `branch` 출력
 ```
