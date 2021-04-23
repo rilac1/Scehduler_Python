@@ -8,6 +8,7 @@
 | ReadyQueue |    Sjf    |
 |     -      |    Srt    |
 |     -      |    Rr     |
+|     -      |   MLFQ    |
 |     -      |  Lottery  |
 |     -      |  Stride   |
 
