@@ -57,4 +57,3 @@ class Simulator:
     def printTask(self):
         for _ in self.task:
             print(_)
-    
