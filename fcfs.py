@@ -22,4 +22,4 @@ class Fcfs(Simulator):
             if cur.rema_t == 0:
                 cur = self.rq.dequeue()
 
-        print("fcfs     :", '%s ' % ', '.join(map(str, self.output)))
+        print("FCFS     :", '%s ' % ', '.join(map(str, self.output)))
