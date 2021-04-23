@@ -4,10 +4,10 @@ from initialize import Initialize
 from readyqueue import ReadyQueue
 
 class Fcfs(Initialize):
-    task : List[Task] = []
-    output : List[str]
-    next_idx : int = 0
-    cpu_time : int = 0
+    task        : List[Task] = []
+    output      : List[str]
+    next_idx    : int = 0
+    cpu_time    : int = 0
     
     def simulate(self):
         self.output = [str] * self.total_time
