@@ -2,14 +2,14 @@
 
 ## Implementation
 
-Simulator | Scheduler | etc
- :------: | :-------: | :-:
- Task | Fcfs| Iofunctions
- ReadyQueue| Sjf|
- -| Srt|
-  -| Rr|
- -| Lottery|
- -| Stride|
+| Simulator  | Scheduler |     etc     |
+| :--------: | :-------: | :---------: |
+|    Task    |   Fcfs    | Iofunctions |
+| ReadyQueue |    Sjf    |
+|     -      |    Srt    |
+|     -      |    Rr     |
+|     -      |  Lottery  |
+|     -      |  Stride   |
 
 **`input.txt` : example**
 | task id | arrival time | service time | ticket |
