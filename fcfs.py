@@ -9,9 +9,6 @@ class Fcfs(Simulator):
     
     def simulate(self):
         self.output = [str] * self.total_time
-
-        for _ in self.task:
-            print(_)
         cur = self.task[self.next_idx]
         self.next_idx += 1
         while self.cpu_time < self.total_time:
@@ -25,5 +22,4 @@ class Fcfs(Simulator):
             if cur.rema_t == 0:
                 cur = self.rq.dequeue()
 
-        print("fcfs     :")
-        print(self.output)
+        print("fcfs     :", '%s ' % ', '.join(map(str, self.output)))
