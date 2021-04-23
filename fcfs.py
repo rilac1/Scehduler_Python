@@ -6,9 +6,14 @@ class Fcfs(Simulator):
     output : List[str]
     next_idx : int = 0
     cpu_time : int = 0
-
+    
     def simulate(self):
+        self.output = [str] * self.total_time
+
+        for _ in self.task:
+            print(_)
         cur = self.task[self.next_idx]
+        self.next_idx += 1
         while self.cpu_time < self.total_time:
             while self.next_idx < self.task_num and self.task[self.next_idx].ariv_t == self.cpu_time:
                 self.rq.enqueue(self.task[self.next_idx])
@@ -21,5 +26,4 @@ class Fcfs(Simulator):
                 cur = self.rq.dequeue()
 
         print("fcfs     :")
-        for _ in self.output:
-            print(_)
+        print(self.output)
