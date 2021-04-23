@@ -3,9 +3,8 @@ from task import Task
 from readyqueue import ReadyQueue
 
 class Simulator:
-    proc_num   : int            = 0
+    task_num   : int            = 0
     total_time : int            = 0
-    output     : List[str]      = []
     task       : List[Task]     = []
     rq         : ReadyQueue
 
@@ -17,7 +16,7 @@ class Simulator:
         self.rq = ReadyQueue(queue_size)
 
     def parseInput(self):
-        self.proc_num = 0
+        self.task_num = 0
         f = open("./input.txt")
         for line in f:
             ps = Task()
@@ -29,12 +28,12 @@ class Simulator:
             ps.qlevel = 0
             ps.ticket = int(x[3])
             self.task.append(ps)
-            self.proc_num += 1
+            self.task_num += 1
         f.close()
     
     def sortInput(self) :
         tmp : Task
-        for i in range(self.proc_num - 1, 0, -1) :
+        for i in range(self.task_num - 1, 0, -1) :
             for j in range(0, i) :
                 if self.task[j].ariv_t > self.task[j].ariv_t :
                     tmp = self.task[j+1]
@@ -47,11 +46,15 @@ class Simulator:
     
     def setTotalTime(self) :
         sum : int = 0 
-        for i in range(0, self.proc_num) :
+        for i in range(0, self.task_num) :
             sum += self.task[i].serv_t
         self.total_time = sum
 
     def setTimeQ(self, q : int) :
-        for i in range(0,self.proc_num) :
+        for i in range(0,self.task_num) :
             self.task[i].time_q = q
+
+    def printTask(self):
+        for _ in self.task:
+            print(_)
     

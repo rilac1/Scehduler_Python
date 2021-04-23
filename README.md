@@ -1,7 +1,15 @@
 # scheduler
 
 ## Implementation
-![캡처](https://user-images.githubusercontent.com/28651727/115529826-315be200-a2ce-11eb-8590-66a2d9762059.PNG)
+
+Simulator | Scheduler | etc
+ :------: | :-------: | :-:
+ Task | Fcfs| Iofunctions
+ ReadyQueue| Sjf|
+ -| Srt|
+  -| Rr|
+ -| Lottery|
+ -| Stride|
 
 **`input.txt` : example**
 | task id | arrival time | service time | ticket |
@@ -11,7 +19,6 @@
 |    C    |      4       |      4       |  100   |
 |    D    |      6       |      5       |  100   |
 |    E    |      8       |      2       |  100   |
-
 
 ## Link 
 

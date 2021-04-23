@@ -1,10 +1,9 @@
 from readyqueue import ReadyQueue
-from simlator import Simulator
+from simulator import Simulator
 
 def main():
     s = Simulator()
-    for _ in s.task:
-        print(_)
+    s.printTask()
 
 if __name__ == "__main__":
     main()
