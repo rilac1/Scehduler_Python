@@ -27,7 +27,7 @@ class Simulator:
             ps.rema_t = int(x[2])
             ps.serv_t = int(x[2])
             ps.qlevel = 0
-            ps.ticket = 100
+            ps.ticket = int(x[3])
             self.task.append(ps)
             self.proc_num += 1
         f.close()

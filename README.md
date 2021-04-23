@@ -3,6 +3,16 @@
 ## Implementation
 ![캡처](https://user-images.githubusercontent.com/28651727/115529826-315be200-a2ce-11eb-8590-66a2d9762059.PNG)
 
+**`input.txt` : example**
+| task id | arrival time | service time | ticket |
+| :-----: | :----------: | :----------: | :----: |
+|    A    |      0       |      3       |  100   |
+|    B    |      2       |      6       |  100   |
+|    C    |      4       |      4       |  100   |
+|    D    |      6       |      5       |  100   |
+|    E    |      8       |      2       |  100   |
+
+
 ## Link 
 
 ### 산코드 
