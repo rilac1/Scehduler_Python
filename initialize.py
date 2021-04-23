@@ -2,7 +2,7 @@ from typing import List
 from task import Task
 from readyqueue import ReadyQueue
 
-class Simulator:
+class Initialize:
     task_num   : int            = 0
     total_time : int            = 0
     task       : List[Task]     = []
