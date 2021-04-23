@@ -12,7 +12,6 @@ class Initialize:
         self.parseInput()
         self.sortInput()
         self.setTotalTime()
-        self.setTimeQ(time_quantum)
         self.rq = ReadyQueue(queue_size)
 
     def parseInput(self):

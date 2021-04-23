@@ -3,7 +3,7 @@ from typing import List
 from initialize import Initialize
 from readyqueue import ReadyQueue
 
-class Sjf(Initialize):
+class SJF(Initialize):
     task        : List[Task] = []
     output      : List[str]
     next_idx    : int = 0
@@ -21,7 +21,6 @@ class Sjf(Initialize):
             self.output[self.cpu_time] = cur.tsk_id
             self.cpu_time += 1
             cur.rema_t -= 1
-            cur.time_q -= 1
             if cur.rema_t == 0:
                 cur = self.rq.dequeue()
 
