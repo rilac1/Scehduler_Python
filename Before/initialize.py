@@ -76,5 +76,5 @@ class Initialize:
         for i in range (5, self.total_time+1, 5):
             print('%10d' %i, end = '')
         print('\n')
-        print("▶ ", '%s ' % ' '.join(map(str, self.output)), end='\n\n')
+        print("▶ ", '%s ' % ' '.join(map(str, output)), end='\n\n')
         
