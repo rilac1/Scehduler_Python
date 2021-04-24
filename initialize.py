@@ -56,3 +56,25 @@ class Initialize:
     def printTask(self):
         for _ in self.task:
             print(_)
+
+    def print_UI(self, output):
+        for id in self.task:
+            id = id.tsk_id
+            print(id+'│', end = '')
+            for t in range(self.total_time):
+
+                if output[t] == id:
+                    print('■■', end = '')
+                else:
+                    print(end = '  ')
+            print()
+        print('  ', end='')
+        for i in range(self.total_time):
+            print('──', end='')
+        print()
+        print("  0", end = '')
+        for i in range (5, self.total_time+1, 5):
+            print('%10d' %i, end = '')
+        print('\n')
+        print("▶ ", '%s ' % ' '.join(map(str, self.output)), end='\n\n')
+        

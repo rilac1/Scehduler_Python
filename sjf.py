@@ -24,7 +24,11 @@ class SJF(Initialize):
             if cur.rema_t == 0:
                 cur = self.rq.dequeue()
 
-        print("SJF      :", '%s ' % ', '.join(map(str, self.output)))
+        print()
+        for i in range(self.total_time//2):
+            print(end='  ')
+        print('【SJF】')
+        self.print_UI(self.output)
 
     def sortbyServ(self):
         tmp : Task
