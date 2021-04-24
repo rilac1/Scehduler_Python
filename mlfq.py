@@ -70,6 +70,7 @@ class MLFQ_1(Initialize):
                     index = (self.rq.front + j) % self.rq.size
                     if self.rq.buff[index].qlevel == i:
                         tmp_arr[next] = self.rq.buff[index]
+                        next += 1
         
         for i in range(1, self.rq.count):
             index = (self.rq.front) % self.rq.size

@@ -10,7 +10,7 @@ def main():
     SJF().simulate()
     FCFS().simulate()
     RR(1).simulate()
-    # MLFQ_1(1).simulate()
+    MLFQ_1(1).simulate()
     
 
 if __name__ == "__main__":
