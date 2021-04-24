@@ -6,6 +6,7 @@ from fcfs       import FCFS
 from sjf        import SJF
 from rr         import RR
 from mlfq       import MLFQ
+from lottery    import LOTT
 
 usage = """
     Usage : scheduler.py [--help] or scheduler.py [-h]
@@ -24,15 +25,14 @@ supplement = """
             -- mlfq: Multi Level Feedback Queue
             -q: time quantum
 
-    *  If you choose RR or MLFQ, You must set the time quantum.
-    *  At MLFQ, if you set a time quantum as a negative number (ex. -n),
-      it is handeld internally by n^i (i means a level of MLFQ')
+    *  If you select RR or MLFQ, You must set the time quantum.
+    *  In MLFQ, Time quantum is n^i (i : priority level)
 
     Caution!!
-    The argument [-q] must be entered last.
+    The argument [-q] should be located at last.
 
     *  If you want to run it as a user interface, 
-      you don\'t need to enter any arguments.
+      you don't need to input any arguments.
     
     'This program was developed in Python version %s'
     """ %sys.version
@@ -49,8 +49,8 @@ def INTERFACE():
     op = 0
     print('*Choose the type of Scheduler.*')
     print('1: SJF (Shortest Job First)')
-    print('2: FCFS (First Come First Served')
-    print('3: RR (Round Robin')
+    print('2: FCFS (First Come First Served)')
+    print('3: RR (Round Robin)')
     print('4: MLFQ (Multi Level Feedback Queue')
     print('5: Lottery\n')
 
