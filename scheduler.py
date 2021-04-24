@@ -7,6 +7,7 @@ from fcfs       import FCFS
 from sjf        import SJF
 from rr         import RR
 from mlfq       import MLFQ
+from lottery    import LOTT
 
 def main():
     rr_or_mlfq = 0      # RR: 1, MLFQ: 2
