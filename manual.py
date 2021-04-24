@@ -68,11 +68,9 @@ def INTERFACE():
         q = int(input())
         RR(q).simulate()
     elif op == 4:        
-        print('[If you want to set the time quantum according to the level, \n'
-        + 'input the time quantum as negative a number]')
-        print('Set the time quantum', end = '')
+        print('[Time quantum = nⁱ (i : priority level)]')
+        print('Input n: ', end = '')
         q = int(input())
-        if q>0:
-            MLFQ_1(q).simulate()
+        MLFQ(q).simulate()
     else:
         print('Error! Input a number from 1 to 5')

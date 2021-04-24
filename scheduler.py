@@ -46,10 +46,7 @@ def main():
                 RR(q).simulate()
                 exit()
             elif rr_or_mlfq==2:
-                if q<0:
-                    MLFQ(-q).simulate()
-                else: 
-                    MLFQ(q).simulate()
+                MLFQ(q).simulate()
                 exit()
     if rr_or_mlfq and q==0:
         print('Error! RR or MLFQ, You must set the time quantum.')
