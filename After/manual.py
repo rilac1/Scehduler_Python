@@ -15,7 +15,8 @@ usage = """
             scheduler.py [--fcfs]
             scheduler.py [--lott]
             scheduler.py [--rr] [-q num]
-            scheduler.py [--mlfq] [-q num] """
+            scheduler.py [--mlfq] [-q num]
+    """
 
 supplement = """
             -- sjf: Shortest Job First
