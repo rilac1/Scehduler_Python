@@ -24,25 +24,25 @@ def main():
     if len(options) == 0:
         manual.INTERFACE()
 
-    for op in options[0]:
-        if op in ("-h", "--help"):
+    for op in options:
+        if op[0] in ("-h", "--help"):
             manual.HELP()
             exit()
-        elif op == '--sjf':
+        elif op[0] == '--sjf':
             SJF().simulate()
             exit()
-        elif op == '--fcfs':
+        elif op[0] == '--fcfs':
             FCFS().simulate()
             exit()
-        elif op == '--rr':
+        elif op[0] == '--rr':
             rr_or_mlfq = 1
-        elif op == '--mlfq':
+        elif op[0] == '--mlfq':
             rr_or_mlfq = 2
-        elif op == '--lott':
+        elif op[0] == '--lott':
             LOTT().simulate()
             exit()
-        elif op == '-q':
-            q = op[1]
+        elif op[0] == '-q':
+            q = int(op[1])
             if rr_or_mlfq==1:
                 RR(q).simulate()
                 exit()
