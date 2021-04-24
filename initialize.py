@@ -76,11 +76,11 @@ class Initialize:
             print('──', end='')
         print()
         print("  0", end = '')
-        # [Item 4] The format built-in and str.format
         for i in range (5, self.total_time+1, 5):
             formatted = format(i, '10d')
             print(formatted, end = '')
-        # %10d를 format()하여 출력형식을 재지정 해주었습니다.
         print('\n')
-        print("▶ ", '%s ' % ' '.join(map(str, output)), end='\n\n')
+        # [Item 4] The format built-in and str.format
+        formatted = format(' '.join(map(str, output)), '<s')
+        print("▶ ",formatted, end='\n\n')
         
