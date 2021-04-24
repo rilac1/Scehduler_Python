@@ -25,7 +25,11 @@ class LOTT(Initialize):
             if cur.rema_t <= 0:
                 self.rq.del_data(cur)
 
-        print("Lottery  :", '%s ' % ', '.join(map(str, self.output)))
+        print()
+        for i in range(self.total_time//2):
+            print(end='  ')
+        print('【Lottery】')
+        self.print_UI(self.output)
 
     def getTotaltickets(self):
         total_ticket = 0

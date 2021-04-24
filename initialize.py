@@ -64,9 +64,9 @@ class Initialize:
             for t in range(self.total_time):
 
                 if output[t] == id:
-                    print('■■', end = '')
+                    print('🟫', end = '')
                 else:
-                    print(end = '  ')
+                    print('  ', end = '')
             print()
         print('  ', end='')
         for i in range(self.total_time):

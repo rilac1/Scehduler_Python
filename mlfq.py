@@ -58,7 +58,11 @@ class MLFQ(Initialize):
                 flag = 1
             self.cpu_time += 1
 
-        print("MLFQ(%dⁱ) :" % self.time_quantum, '%s ' % ', '.join(map(str, self.output)))
+        print()
+        for i in range(self.total_time//2):
+            print(end='  ')
+        print('【MLFQ】')
+        self.print_UI(self.output)
 
     def sortbylevel(self):
         tmp_arr = [Task] * (self.rq.count+1)

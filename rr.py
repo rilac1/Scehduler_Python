@@ -48,5 +48,9 @@ class RR(Initialize):
                 tmp.time_q = self.time_quantum
                 flag = 1
 
-        print("RR       :", '%s ' % ', '.join(map(str, self.output)))
+        print()
+        for i in range(self.total_time//2):
+            print(end='  ')
+        print('【RR】')
+        self.print_UI(self.output)
     
