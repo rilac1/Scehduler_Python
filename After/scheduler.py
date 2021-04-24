@@ -14,8 +14,12 @@ def main():
     q = 0
 
     try:
+        # [Item 6] Unpacking allows for assigning multiple values in a single statement.
+        # [Item 11] Know How to Slice Sequences
         options, args = getopt.getopt(sys.argv[1:], 'hq:', 
         ['help', 'sjf', 'fcfs','rr','mlfq','lott'])
+        # getopt()는 두 개의 List를 반환하기 때문에 이들을 Unpacking하여 두 개의 변수에 대입시켰습니다.
+        # 인자를 받을 때 함수 이름에 해당하는 인자는 필요없기 때문에 [1:]로 slice해 주었습니다.
     
     except:
         manual.USAGE()
@@ -43,12 +47,14 @@ def main():
             exit()
         elif op[0] == '-q':
             q = int(op[1])
+            # [Item 10] Issue 3. Simulate switch-case statement
             if rr_or_mlfq==1:
                 RR(q).simulate()
                 exit()
             elif rr_or_mlfq==2:
                 MLFQ(q).simulate()
                 exit()
+            # else - if 문을 elif 문으로 사용하여 가독성을 높였습니다.
     if rr_or_mlfq and q==0:
         print('Error! RR or MLFQ, You must set the time quantum.')
         print('more: scheduler.py [-help] or scheduler.py [-h]')

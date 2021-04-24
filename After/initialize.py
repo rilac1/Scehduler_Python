@@ -16,10 +16,10 @@ class Initialize:
 
     def parseInput(self):
         self.task_num = 0
-        # [Item 03] Default input and output operations
+        # [Item 3] Default input and output operations
         # involving file handles follows str types instead of raw bytes
         f = open("./input.txt", 'r')
-        # ~~~~~~
+        # br을 사용하면 안됩니다.
 
         for line in f:
             ps = Task()
@@ -66,7 +66,6 @@ class Initialize:
             id = id.tsk_id
             print(id+'│', end = '')
             for t in range(self.total_time):
-
                 if output[t] == id:
                     print('🟫', end = '')
                 else:
@@ -83,5 +82,5 @@ class Initialize:
             print(formatted, end = '')
         # %10d를 format()하여 출력형식을 재지정 해주었습니다.
         print('\n')
-        print("▶ ", '%s ' % ' '.join(map(str, self.output)), end='\n\n')
+        print("▶ ", '%s ' % ' '.join(map(str, output)), end='\n\n')
         
