@@ -46,9 +46,10 @@ def main():
             if rr_or_mlfq==1:
                 RR(q).simulate()
                 exit()
-            elif rr_or_mlfq==2:
-                MLFQ(q).simulate()
-                exit()
+            else:
+                if rr_or_mlfq==2:
+                    MLFQ(q).simulate()
+                    exit()
     if rr_or_mlfq and q==0:
         print('Error! RR or MLFQ, You must set the time quantum.')
         print('more: scheduler.py [-help] or scheduler.py [-h]')
