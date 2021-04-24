@@ -16,7 +16,11 @@ class Initialize:
 
     def parseInput(self):
         self.task_num = 0
-        f = open("./input.txt")
+        # [Item 03] Default input and output operations
+        # involving file handles follows str types instead of raw bytes
+        f = open("./input.txt", 'r')
+        # ~~~~~~
+
         for line in f:
             ps = Task()
             x = line.split()
@@ -73,8 +77,11 @@ class Initialize:
             print('──', end='')
         print()
         print("  0", end = '')
+        # [Item 4] The format built-in and str.format
         for i in range (5, self.total_time+1, 5):
-            print('%10d' %i, end = '')
+            formatted = format(i, '10d')
+            print(formatted, end = '')
+        # %10d를 format()하여 출력형식을 재지정 해주었습니다.
         print('\n')
         print("▶ ", '%s ' % ' '.join(map(str, self.output)), end='\n\n')
         

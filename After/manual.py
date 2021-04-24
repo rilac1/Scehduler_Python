@@ -36,7 +36,8 @@ supplement = """
       you don't need to input any arguments.
     
     'This program was developed in Python version %s'
-    """ %sys.version
+    """ %sys.version  # [Item 1] Check the version of your Python
+    # 사용자들에게 개발버전을 제공하기 위해 Item 1을 사용하였습니다.
 
 def HELP():
     print(usage)
