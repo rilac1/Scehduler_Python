@@ -59,7 +59,7 @@ class MLFQ(Initialize):
             self.cpu_time += 1
 
         print()
-        for i in range(self.total_time//2):
+        for i in range(self.total_time//3):
             print(end='  ')
         print('【MLFQ】')
         self.print_UI(self.output)

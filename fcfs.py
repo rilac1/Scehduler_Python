@@ -28,7 +28,7 @@ class FCFS(Initialize):
                 cur = self.rq.dequeue()
 
         print()
-        for i in range(self.total_time//2):
+        for i in range(self.total_time//3):
             print(end='  ')
         print('【FCFS】')
         self.print_UI(self.output)

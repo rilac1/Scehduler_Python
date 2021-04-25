@@ -49,7 +49,7 @@ class RR(Initialize):
                 flag = 1
 
         print()
-        for i in range(self.total_time//2):
+        for i in range(self.total_time//3):
             print(end='  ')
         print('【RR】')
         self.print_UI(self.output)

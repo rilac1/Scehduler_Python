@@ -35,12 +35,12 @@ supplement = """
     *  If you want to run it as a user interface, 
       you don't need to input any arguments.
     
-    'This program was developed in Python version %s'
+    'Your Python version is %s'
     """ %sys.version  # [Item 1] Check the version of your Python
-    # 사용자들에게 개발버전을 제공하기 위해 Item 1을 사용하였습니다.
+    # 사용자들에게 실행중인 개발버전을 알려주기 위해 Item 1을 사용하였습니다.
 
 def HELP():
-    print(usage)
+    print(usage, end='')
     print(supplement)
     exit()
 
@@ -48,14 +48,19 @@ def USAGE():
     print(usage)
 
 def INTERFACE():
+    interface = """
+┌────────────────────────────────────────┐
+│ *Choose the type of Scheduler.*        │
+│                                        │
+│  1: SJF (Shortest Job First            │
+│  2: FCFS (First Come First Served)     │
+│  3: RR (Round Robin)                   │
+│  4: MLFQ (Multi Level Feedback Queue   │
+│  5: Lottery                            │
+└────────────────────────────────────────┘
+    """
     op = 0
-    print('*Choose the type of Scheduler.*')
-    print('1: SJF (Shortest Job First)')
-    print('2: FCFS (First Come First Served)')
-    print('3: RR (Round Robin)')
-    print('4: MLFQ (Multi Level Feedback Queue')
-    print('5: Lottery\n')
-
+    print(interface)
     print('Input a number from 1 to 5: ', end='')
     op = int(input())
 
