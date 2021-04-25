@@ -13,6 +13,7 @@ def main():
     rr_or_mlfq = 0      # RR: 1, MLFQ: 2
     q = 0
 
+    # [Item 16] 
     try:
         # [Item 6] Unpacking allows for assigning multiple values in a single statement.
         # [Item 11] Know How to Slice Sequences

@@ -58,8 +58,11 @@ class Initialize:
             self.task[i].time_q = q
 
     def printTask(self):
+        # [Item Underscore]
+        # Use in loop
         for _ in self.task:
             print(_)
+        # 값이 필요없는 루프에서 언더스코어를 사용하였습니다.
 
     def print_UI(self, output):
         for id in self.task:
