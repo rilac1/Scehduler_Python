@@ -24,8 +24,18 @@ class ReadyQueue:
         self.count += 1
     
     def dequeue(self) :
+        # [Item 20] Prefer Raising Exceptions to Returning None
+        """
         if self.front == self.rear :
             return None
+        """
+        try: 
+            self.front == self.rear
+        except: 
+            dequeue_Error
+            return False, None
+        #> 에러가 확실하게 드러날 수 있게 None을 반환하지 않고 예외처리를 발생시켰습니다.
+
         self.front = (self.front + 1) % self.size
         self.count -= 1
         return self.buff[self.front]
