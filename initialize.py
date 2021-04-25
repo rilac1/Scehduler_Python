@@ -19,7 +19,7 @@ class Initialize:
         # [Item 3] Default input and output operations
         # involving file handles follows str types instead of raw bytes
         f = open("./input.txt", 'r')
-        # br을 사용하면 안됩니다.
+        #> br을 사용하면 안됩니다.
 
         for line in f:
             ps = Task()
@@ -58,21 +58,24 @@ class Initialize:
             self.task[i].time_q = q
 
     def printTask(self):
-        # [Item Underscore]
-        # Use in loop
+        # [Item Underscore] Use in loop
         for _ in self.task:
             print(_)
-        # 값이 필요없는 루프에서 언더스코어를 사용하였습니다.
+        #> 값이 필요없는 루프에서 언더스코어를 사용하였습니다.
 
     def print_UI(self, output):
         for id in self.task:
             id = id.tsk_id
             print(id+'│', end = '')
-            for t in range(self.total_time):
-                if output[t] == id:
+            # [Item 7] Prefer enumerate Over range
+            for t, target in enumerate(output):
+                if target == id:
                     print('🟫', end = '')
+                elif t>0 and (t)%5 == 0:
+                    print('%c' %'|', end=' ')
                 else:
                     print('  ', end = '')
+            #> for 문에서 index 값과 반복횟수를 모두 사용해야 하기 때문에 enumerate를 사용하였습니다.
             print()
         print('  ', end='')
         for i in range(self.total_time):
@@ -80,10 +83,10 @@ class Initialize:
         print()
         print("  0", end = '')
         for i in range (5, self.total_time+1, 5):
-            formatted = format(i, '10d')
-            print(formatted, end = '')
+            print('%10d' %i, end='')
         print('\n')
         # [Item 4] The format built-in and str.format
         formatted = format(' '.join(map(str, output)), '<s')
         print("▶ ",formatted, end='\n\n')
+        #> formatting을 사용하여 출력을 지정하여 코드를 간단하게 하였습니다.
         

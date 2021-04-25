@@ -37,7 +37,7 @@ supplement = """
     
     'Your Python version is %s'
     """ %sys.version  # [Item 1] Check the version of your Python
-    # 사용자들에게 실행중인 개발버전을 알려주기 위해 Item 1을 사용하였습니다.
+    #> 사용자들에게 실행중인 파이썬의 버전을 알려주기 위해 Item 1을 사용하였습니다.
 
 def HELP():
     print(usage, end='')
@@ -75,7 +75,7 @@ def INTERFACE():
         q = int(input())
         RR(q).simulate()
     elif op == 4:        
-        print('[Time quantum = nⁱ (i : priority level)]')
+        print('[Time quantum = nⁱ (i: priority level)]')
         print('Input n: ', end = '')
         q = int(input())
         MLFQ(q).simulate()

@@ -19,8 +19,8 @@ def main():
         # [Item 11] Know How to Slice Sequences
         options, args = getopt.getopt(sys.argv[1:], 'hq:', 
         ['help', 'sjf', 'fcfs','rr','mlfq','lott'])
-        # getopt()는 두 개의 List를 반환하기 때문에 이들을 Unpacking하여 두 개의 변수에 대입시켰습니다.
-        # 인자를 받을 때 함수 이름에 해당하는 인자는 필요없기 때문에 [1:]로 slice해 주었습니다.
+        #> getopt()는 두 개의 List를 반환하기 때문에 이들을 Unpacking하여 두 개의 변수에 대입시켰습니다.
+        #> 인자를 받을 때 함수 이름에 해당하는 인자는 필요없기 때문에 [1:]로 slice해 주었습니다.
     
     except:
         manual.USAGE()
@@ -55,10 +55,12 @@ def main():
             elif rr_or_mlfq==2:
                 MLFQ(q).simulate()
                 exit()
-            # else - if 문을 elif 문으로 사용하여 가독성을 높였습니다.
-    if rr_or_mlfq and q==0:
+            #> else - if 문을 elif 문으로 사용하여 가독성을 높였습니다.
+    # [Item9] Avoid else Block after for and
+    else:
         print('Error! RR or MLFQ, You must set the time quantum.')
         print('more: scheduler.py [-help] or scheduler.py [-h]')
+    #> for문을 모두 수행했다면 어떤 조건도 만족하지 못했다는 뜻이므로 에러처리를 해주기 위해 for-else문을 사용하였습니다.
 
 
 if __name__ == "__main__": 
