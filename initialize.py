@@ -132,4 +132,3 @@ class Proc:
     def __repr__(self):
         return f'Tool({self.name!r}, {self.ariv})'
 
-    def
