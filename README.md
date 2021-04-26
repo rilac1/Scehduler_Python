@@ -115,3 +115,5 @@ git branch -d kim       // `kim` branch 삭제
 ```sh
 git push --set-uptream origin kim // `kim` branch를 default 원격 저장소로 지정
 ```
+## 이전 실행결과 
+![캡처](https://user-images.githubusercontent.com/28651727/116092879-2693b980-a6e1-11eb-96f0-2b44b3f0a249.PNG)
