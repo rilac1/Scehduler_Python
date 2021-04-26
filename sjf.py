@@ -40,7 +40,9 @@ class SJF(Initialize):
         for i in range(0, self.rq.count):
             idx[i] = (self.rq.front + i + 1) % self.rq.size
 
+        # [Item 12] Avoid Striding and Slicing in a Single Expression
         for i in range(self.rq.count - 1, 0, -1):
+        # stride를 사용하였기 때문에 arrange범위에 유의해서 작성하였습니다. 
             for j in range(0, i):
                 serv_tmp1 = self.rq.buff[idx[j]].serv_t
                 serv_tmp2 = self.rq.buff[idx[j+1]].serv_t
