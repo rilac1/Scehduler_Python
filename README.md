@@ -13,13 +13,13 @@
 9 - initialize  
 10 - scheduler   
 11 - scheduler  
-12
-13
+12 - 
+13 - 
 14 - initilizer   
 15 - underscore - initalize   
 16 - initialize
-17
-18  
+17 - 
+18 - 
 19 - scheduler
 20 - readyqueue   
 
