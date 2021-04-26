@@ -1,3 +1,4 @@
+from collections.abc import MutableMapping
 from typing import List
 from task import Task
 from readyqueue import ReadyQueue
@@ -92,4 +93,41 @@ class Initialize:
         formatted = format(' '.join(map(str, output)), '<s')
         print("▶ ",formatted, end='\n\n')
         #> formatting을 사용하여 출력을 지정하여 코드를 간단하게 하였습니다.
+
+
+    # [Item 14] Sort by Complex Criteria using the key Parameter
+    def sort_proc(self):
+        _proc = []
+        f = open("./input.txt", 'r')
         
+        for line in f:
+            x = line.split()
+            _proc.append(str(x[0], int(x[1])))
+        f.close()
+
+        print('Unsorted:', repr(_proc))
+        _proc.sort(key=lambda x: x.name)
+        print('\nSorted: ', )
+    #> process 클래스를 선언하여 프로세스들을 도착시간에 맞게 정렬하는 함수를 구현하였습니다. 
+
+    def print_Serv(self):
+        p_id = []
+        p_serv = []
+        f = open("./input.txt", 'r')
+        for line in f:
+            x = line.split()
+            p_id.append(str(x[0]))
+            p_serv.append(int(x[2]))
+        f.close()
+        # [Item 8] : Use zip to Process Iterators in Parallel
+        for name, count in zip(p_id, p_serv):
+            print(name + count)
+        #> zip을 활용하여 각 프로세스의 servicetime을 출력하는 함수를 작성하였습니다. 
+        
+class Proc:
+    def __init__(self, name, ariv):
+        self.name = name
+        self.ariv = ariv
+
+    def __repr__(self):
+        return f'Tool({self.name!r}, {self.ariv})'
