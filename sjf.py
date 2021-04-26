@@ -47,5 +47,5 @@ class SJF(Initialize):
                 if serv_tmp1 > serv_tmp2:
                     tmp = self.rq.buff[idx[j]]
                     self.rq.buff[idx[j]] = self.rq.buff[idx[j+1]]
-                    self.rq.buff[idx[j+1]] = tmp
-    
+                    self.rq.buff[idx[j+1]] = 
+                    
