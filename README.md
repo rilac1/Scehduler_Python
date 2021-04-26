@@ -30,8 +30,35 @@ python3 scheduler.py                // user interface mode
 python3 scheduler.py --mlfq -q -2   // process directly
 python3 scheduler.py  --help        // help function
 ```
+```
+    Usage : scheduler.py [--help] or scheduler.py [-h]
+            scheduler.py
+            scheduler.py [--sjf]
+            scheduler.py [--fcfs]
+            scheduler.py [--lott]
+            scheduler.py [--rr] [-q num]
+            scheduler.py [--mlfq] [-q num]
+    
+            -- sjf: Shortest Job First
+            -- fcfs: First Come First Served
+            -- lott: Lottery
+            -- rr: Round Robin
+            -- mlfq: Multi Level Feedback Queue
+            -q: time quantum
 
-    ## Implementation
+    *  If you select RR or MLFQ, You must set the time quantum.
+    *  In MLFQ, Time quantum is n^i (i : priority level)
+
+    Caution!!
+    The argument [-q] should be located at last.
+
+    *  If you want to run it as a user interface, 
+      you don't need to input any arguments.
+    
+    'Your Python version is 3.8.5 (default, Jan 27 2021, 15:41:15) 
+[GCC 9.3.0]'
+```
+## Implementation
 
 | Simulator  | Scheduler |     etc     |
 | :--------: | :-------: | :---------: |
