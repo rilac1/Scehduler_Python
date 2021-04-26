@@ -120,7 +120,8 @@ class Initialize:
             p_serv.append(int(x[2]))
         f.close()
         # [Item 8] : Use zip to Process Iterators in Parallel
-        for name, count in zip(p_id, p_serv):
+        proc_zip = zip(p_id, p_serv)
+        for name, count in proc_zip:
             print(name + count)
         #> zip을 활용하여 각 프로세스의 servicetime을 출력하는 함수를 작성하였습니다. 
 
