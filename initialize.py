@@ -71,8 +71,10 @@ class Initialize:
             # [Item 7] Prefer enumerate Over range
             for t, target in enumerate(output):
                 if target == id:
-                    print(self.o_ui[id], end = '')
-                elif t>0 and (t)%5 == 0:
+                    # [Item 16] Prefer get over in and KeyError to Handle Missing Dictionary Keys
+                    print(self.o_ui.get(id,'⬛'), end = '')
+                    #> 딕셔너리에 정의되어 있는 A,B,C,D,E 이외의 키값을 참조하면 검은색을 출력하게 하였습니다. 
+                elif t>0 and (t) % 5 == 0:
                     print('%c' %'|', end=' ')
                 else:
                     print('  ', end = '')

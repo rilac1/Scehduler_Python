@@ -10,11 +10,10 @@
 5 - scheduler  
 6 - scheduler  
 7 - initialize  
-<br>
-9 - initalize  
+9 - initialize  
 10 - scheduler   
 11 - scheduler  
-<br>
+16 - initialize  
 20 - readyqueue   
 underscore - initalize   
 <br>
@@ -30,7 +29,6 @@ underscore - initalize
 14 - `Key` 값을 이용해서 정렬.   
     : `(ariv_t, serv_t)` 딕셔너리로 만들어서 정렬하면 좋을듯.    
 15 - 딕셔너리 삽입 순서에 의존할 때는 조심하라.  
-16 - 딕셔너리 키가 없을 때 처리는 `get`을 이용해라.  
 17 - `defaultdick` 를 사용해서 키가 없는 경우를 처리해라.  
 18 - `__missing__`를 사용해서 키에 따라 다른 디폴트 값을 생성해라.  
 <br>
@@ -42,7 +40,7 @@ python3 scheduler.py                // user interface mode
 python3 scheduler.py --mlfq -q -2   // process directly
 ```
 
-## Implementation
+    ## Implementation
 
 | Simulator  | Scheduler |     etc     |
 | :--------: | :-------: | :---------: |
