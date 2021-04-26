@@ -28,6 +28,7 @@ underscore - initalize
 ```
 python3 scheduler.py                // user interface mode
 python3 scheduler.py --mlfq -q -2   // process directly
+python3 scheduler.py  --help        // help function
 ```
 
     ## Implementation
