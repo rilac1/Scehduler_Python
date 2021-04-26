@@ -64,9 +64,12 @@ def INTERFACE():
     print('Input a number from 1 to 5: ', end='')
     op = int(input())
 
-		menu = {1:SJF().simulate(), 2:FCFS().simulate(), 5:LOTT().simulate(())}
-    if op in menu.key:
-    	menu[op][1]
+    if op == 1:
+        SJF().simulate()
+    elif op == 2:
+        FCFS().simulate()
+    elif op == 5:
+        LOTT().simulate()
     elif op == 3:
         print('Set the time quantum: ', end = '')
         q = int(input())
