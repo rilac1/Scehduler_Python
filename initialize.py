@@ -130,6 +130,12 @@ class Initialize:
         print(f'Process {proc_id} : {rest}')
         # input.txt파일로부터 parse한 task정보를 process id 와 나머지 정보로 나누어 한번에 출력합니다.
 
+# [Item 18] Know How to Construct KeyDependent Default Values with
+class SearchProc(dict):
+    def __missing__(self, key):
+        print('no match process exist!')
+# Process딕셔너리를 전달받아 process id에 따라 조회할 때 만약 해당하는 프로세스가 없으면 에러메시지를 출력한다
+
 class Proc:
     def __init__(self, name, ariv):
         self.name = name
@@ -137,4 +143,3 @@ class Proc:
 
     def __repr__(self):
         return f'Tool({self.name!r}, {self.ariv})'
-
