@@ -15,7 +15,7 @@
 11 - scheduler  
 20 - readyqueue   
 underscore - initalize   
-<br>
+
 *총 12개 완료함*
 
 ---
@@ -30,7 +30,6 @@ underscore - initalize
 16 - 딕셔너리 키가 없을 때 처리는 `get`을 이용해라.  
 17 - `defaultdick` 를 사용해서 키가 없는 경우를 처리해라.  
 18 - `__missing__`를 사용해서 키에 따라 다른 디폴트 값을 생성해라.  
-<br>
 19 - 함수의 반환값이 3개 이상이면 안된다.  
 
 ## usage
