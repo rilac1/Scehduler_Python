@@ -29,6 +29,7 @@ def main():
 
     if len(options) == 0:
         manual.INTERFACE()
+        exit()
     # [Item 5] Write Helper Functions Instead of Complex Expressions
     helper(options)
     # 복잡한 식 대신에 helper 함수를 따로 작성하여서 프로그램을 모듈화하였고 이를 통해 main 함수를 간결하게 하였습니다.
