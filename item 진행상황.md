@@ -3,16 +3,16 @@
 2 - fcfs  
 3 - initalize  
 4 - initalize  
-5 - scheduler
+5 - scheduler  
 6 - scheduler  
 7 - initialize  
 <br>
 9 - initalize  
-10 - scheduler  
+10 - scheduler   
 11 - scheduler  
 <br>
-20 - readyqueue  
-underscore - initalize  
+20 - readyqueue   
+underscore - initalize   
 <br>
 *총 12개 완료함*
 
