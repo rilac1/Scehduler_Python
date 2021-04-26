@@ -7,6 +7,7 @@ class Initialize:
     total_time : int            = 0
     task       : List[Task]     = []
     rq         : ReadyQueue
+    o_ui = {'A':'🟥', 'B':'🟦', 'C': '🟨','D':'🟩','E':'🟪','F':'⬜'}
 
     def __init__(self,time_quantum = 1, queue_size = 10) :
         self.parseInput()
@@ -70,7 +71,7 @@ class Initialize:
             # [Item 7] Prefer enumerate Over range
             for t, target in enumerate(output):
                 if target == id:
-                    print('🟫', end = '')
+                    print(self.o_ui[id], end = '')
                 elif t>0 and (t)%5 == 0:
                     print('%c' %'|', end=' ')
                 else:
