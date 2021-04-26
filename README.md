@@ -13,7 +13,7 @@
 9 - initialize  
 10 - scheduler   
 11 - scheduler  
-12 -  sjf
+12 -  sjf  
 13 -  
 14 - initilizer   
 15 -  
