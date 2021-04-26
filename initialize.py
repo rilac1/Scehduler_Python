@@ -123,7 +123,13 @@ class Initialize:
         for name, count in zip(p_id, p_serv):
             print(name + count)
         #> zip을 활용하여 각 프로세스의 servicetime을 출력하는 함수를 작성하였습니다. 
-        
+
+    def print_parsed(self):
+        # [Item 13] Prefer Catch-All Unpacking Over Slicing
+        proc_id, *rest = self.task
+        print(f'Process {proc_id} : {rest}')
+        # input.txt파일로부터 parse한 task정보를 process id 와 나머지 정보로 나누어 한번에 출력합니다.
+
 class Proc:
     def __init__(self, name, ariv):
         self.name = name
