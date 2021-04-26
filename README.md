@@ -10,11 +10,9 @@
 5 - scheduler  
 6 - scheduler  
 7 - initialize  
-<br>
 9 - initalize  
 10 - scheduler   
 11 - scheduler  
-<br>
 20 - readyqueue   
 underscore - initalize   
 <br>
@@ -25,7 +23,6 @@ underscore - initalize
 > 8 - 여러개의 리스트에서 동일한 인덱스를 사용할 때 `zip`을 사용해라.  
 12 - 슬라이싱과 인덱싱을 한번에 하지 마라.  
 13 - 슬라이싱 보다는 언패킹을 사용해라.  
-<br>
 **<14~18> 딕셔너리 관련**  
 14 - `Key` 값을 이용해서 정렬.   
     : `(ariv_t, serv_t)` 딕셔너리로 만들어서 정렬하면 좋을듯.    
