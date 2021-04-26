@@ -53,9 +53,3 @@ class LOTT(Initialize):
             counter += self.rq.buff[index].ticket
             if counter > winner:
                 return self.rq.buff[index]
-
-def main():
-    LOTT().simulate()
-
-if __name__ == "__main__": 
-    main()

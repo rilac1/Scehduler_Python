@@ -17,9 +17,11 @@ def main():
     try:
         # [Item 6] Unpacking allows for assigning multiple values in a single statement.
         # [Item 11] Know How to Slice Sequences
+        # [Item 19] Never Unpack More Than Three Variables When Functions Return Multiple Values
         options, args = getopt.getopt(sys.argv[1:], 'hq:', ['help', 'sjf', 'fcfs','rr','mlfq','lott'])
         #> getopt()는 두 개의 List를 반환하기 때문에 이들을 Unpacking하여 두 개의 변수에 대입시켰습니다.
         #> 인자를 받을 때 함수 이름에 해당하는 인자는 필요없기 때문에 [1:]로 slice해 주었습니다.
+        #> 함수의 반환값을 2개로 제한하였습니다.
     
     except:
         manual.USAGE()
