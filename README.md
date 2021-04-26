@@ -14,6 +14,7 @@
 10 - scheduler   
 11 - scheduler  
 16 - initialize  
+19 - 함수의 반환값이 3개 이상이면 안된다.  
 20 - readyqueue   
 underscore - initalize   
 
@@ -30,7 +31,6 @@ underscore - initalize
 15 - 딕셔너리 삽입 순서에 의존할 때는 조심하라.  
 17 - `defaultdick` 를 사용해서 키가 없는 경우를 처리해라.  
 18 - `__missing__`를 사용해서 키에 따라 다른 디폴트 값을 생성해라.  
-19 - 함수의 반환값이 3개 이상이면 안된다.  
 
 ## usage
 ```
