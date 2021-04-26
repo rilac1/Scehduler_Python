@@ -32,7 +32,7 @@ class ReadyQueue:
         try: 
             self.front == self.rear
         except: 
-            dequeue_Error
+            LookupError
             return False, None
         #> 에러가 확실하게 드러날 수 있게 None을 반환하지 않고 예외처리를 발생시켰습니다.
 
