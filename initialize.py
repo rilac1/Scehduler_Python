@@ -1,3 +1,4 @@
+from collections import defaultdict
 from collections.abc import MutableMapping
 from typing import List
 from task import Task
@@ -125,10 +126,6 @@ class Initialize:
             print(name + count)
         #> zip을 활용하여 각 프로세스의 servicetime을 출력하는 함수를 작성하였습니다. 
 
-        # [Item 17] Use setdefault for the shortest option
-        proc_zip.setdefault('DummyLoop', set()).add(1e7)
-        #> 워크로드에 더미루프가 추가 되었을 때 스케쥴링이 어떻게 되는지 확인해보기 위해 setdefault를 사용하여 DumyLoop 프로세스를 추가해주었습니다. 
-
     def print_parsed(self):
         # [Item 13] Prefer Catch-All Unpacking Over Slicing
         proc_id, *rest = self.task
@@ -148,3 +145,13 @@ class Proc:
 
     def __repr__(self):
         return f'Tool({self.name!r}, {self.ariv})'
+
+class proc_level:
+    def __init__(self):
+        # [Item 17] Prefer defaultdict over setdefault to Handle Missing Items in Internal State
+        self.proc = defaultdict(int)
+        # defaultdict을 통해 키에 대한 값이 없으면 값을 0으로 초기화하여 
+        # process의 priority를 따로 초기화 하지 않아도 사용할 수 있도록 설정하였습니다. 
+    def add(self, pname, priority):
+        self.proc[pname].add(priority)
+

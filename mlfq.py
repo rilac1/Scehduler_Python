@@ -1,3 +1,4 @@
+from collections import defaultdict
 from task import Task
 from typing import List
 from initialize import Initialize
