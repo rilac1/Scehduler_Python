@@ -125,6 +125,10 @@ class Initialize:
             print(name + count)
         #> zip을 활용하여 각 프로세스의 servicetime을 출력하는 함수를 작성하였습니다. 
 
+        # [Item 17] Use setdefault for the shortest option
+        proc_zip.setdefault('DummyLoop', set()).add(1e7)
+        #> 워크로드에 더미루프가 추가 되었을 때 스케쥴링이 어떻게 되는지 확인해보기 위해 setdefault를 사용하여 DumyLoop 프로세스를 추가해주었습니다. 
+
     def print_parsed(self):
         # [Item 13] Prefer Catch-All Unpacking Over Slicing
         proc_id, *rest = self.task
