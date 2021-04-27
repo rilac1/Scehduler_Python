@@ -62,10 +62,12 @@ def INTERFACE():
     op = 0
     print(interface)
     print('Input a number from 1 to 5: ', end='')
-    op = int(input())
 
-    if op == 1:
+    # [item 10] Prevent Repetition with Assignment Expressions
+    if (op := int(input())) == 1:
         SJF().simulate()
+    # walrus연산자를 적용함으로써 op = int(input())을 따로 수행하지 않고
+    # 조건문 내부에서 표현하여 가독성을 높이고, 사용 위치를 명시적으로 할 수 있었습니다.
     elif op == 2:
         FCFS().simulate()
     elif op == 5:

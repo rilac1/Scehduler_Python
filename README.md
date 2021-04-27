@@ -11,7 +11,7 @@
 6 - scheduler  
 7 - initialize  
 9 - scheduler  
-10 - scheduler   
+10 - manual.py 
 11 - scheduler  
 12 - sjf  
 13 - initialize  
