@@ -62,7 +62,7 @@ def helper(options):
             elif rr_or_mlfq==2:
                 MLFQ(q).simulate()
                 exit()
-    # [Item9] Avoid else Block after for and
+    # [Item 9] Avoid else Block after for and
     else:
         print('Error! RR or MLFQ, You must set the time quantum.')
         print('more: scheduler.py [-help] or scheduler.py [-h]')
