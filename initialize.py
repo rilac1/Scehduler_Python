@@ -150,8 +150,8 @@ class proc_level:
     def __init__(self):
         # [Item 17] Prefer defaultdict over setdefault to Handle Missing Items in Internal State
         self.proc = defaultdict(int)
-        # defaultdict을 통해 키에 대한 값이 없으면 값을 0으로 초기화하여 
-        # process의 priority를 따로 초기화 하지 않아도 사용할 수 있도록 설정하였습니다. 
+        # defaultdict을 통해 키에 대한 값이 없으면 값을 0으로 초기화하여 priority level을 증가시킬때  
+        # 사전에 process의 priority를 따로 초기화 하지 않아도 사용할 수 있도록 설정하였습니다. 
     def add(self, pname, priority):
         self.proc[pname].add(priority)
 
