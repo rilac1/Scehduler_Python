@@ -6,12 +6,12 @@
 >1 - manual  
 2 - fcfs  
 3 - initalize  
-4 - initalize  
+4 - initalize   
 5 - scheduler  
 6 - scheduler  
 7 - initialize  
 9 - scheduler  
-10 - manual.py 
+10 - manual  
 11 - scheduler  
 12 - sjf  
 13 - initialize  
@@ -21,7 +21,7 @@ underscore - initalize
 16 - initialize  
 17 - initialize  
 18 -  
-19 - scheduler
+19 - scheduler  
 20 - readyqueue   
 
 ## usage
