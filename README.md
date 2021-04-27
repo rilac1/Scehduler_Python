@@ -10,7 +10,7 @@
 5 - scheduler  
 6 - scheduler  
 7 - initialize  
-9 - initialize  
+9 - scheduler  
 10 - scheduler   
 11 - scheduler  
 12 - sjf  
@@ -19,7 +19,7 @@
 15 -  
 underscore - initalize   
 16 - initialize
-17 -  
+17 - initialize  
 18 -  
 19 - scheduler
 20 - readyqueue   
