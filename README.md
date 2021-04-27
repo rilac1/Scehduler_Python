@@ -23,7 +23,7 @@ underscore - initalize
 18 -  
 19 - scheduler  
 20 - readyqueue   
-
+23 - mlfq.py -> 추가
 ## usage
 ```
 python3 scheduler.py                // user interface mode

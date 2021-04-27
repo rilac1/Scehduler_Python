@@ -12,7 +12,11 @@ class MLFQ(Initialize):
     time_quantum: int
     MAX_LEVEL   : int = 10
 
+    # [Item 23] Provide Optional Behavior with Keyword Arguments
     def __init__(self,time_quantum = 1, queue_size = 10):
+    # keyword argument를 사용하여 함수 인자를 명시적으로 전달할 수 있었습니다.
+    # 이렇게 사용하면 클래스 사용시 커서를 갖다대면 인자로 어떤 값을 전달해야하는지 
+    # 확인할 수 있어 유용한것 같습니다. 
         self.parseInput()
         self.sortInput()
         self.setTotalTime()
